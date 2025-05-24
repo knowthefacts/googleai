@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd # Add pandas import
 
+# Set page config for a more appealing look
+st.set_page_config(layout="wide", page_title="Interactive Data Editor Pro", page_icon="✨")
+
 st.markdown("""
 <style>
 /* General body style */
@@ -68,9 +71,6 @@ if 'page' not in st.session_state:
     st.session_state.page = "Upload Data" # Default page
 if 'df' not in st.session_state:
     st.session_state.df = None
-
-# Set page config for a more appealing look
-st.set_page_config(layout="wide", page_title="Interactive Data Editor Pro", page_icon="✨")
 
 # App title and description
 st.markdown("<h1 class='main-title'>📊 Interactive Data Editor Pro ✨</h1>", unsafe_allow_html=True)
